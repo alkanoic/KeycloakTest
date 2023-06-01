@@ -23,7 +23,8 @@ Passwordをtestとして設定。
 ### Create Client
 
 - Client type：OpenID Connect
-- Client ID test-client
+- Client ID：test-client
+- Valid redirect URIs：*
 
 ## docker volume作成
 

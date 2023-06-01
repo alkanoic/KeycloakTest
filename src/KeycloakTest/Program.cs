@@ -26,7 +26,7 @@ services.AddAuthentication(options =>
       options.Authority = "http://localhost:8080/auth/realms/Test";
       options.MetadataAddress = "http://localhost:8080/realms/Test/.well-known/openid-configuration";
       options.ClientId = "test-client";
-      options.ClientSecret = "Eq41jAVOnZeUeZGDbXE5uuxdvbxStz6x";
+      options.ClientSecret = "mA1VxFslWGukos6JquOZcoU7qVUElsmv";
       options.Scope.Add("openid");
       options.Scope.Add("profile");
       options.ResponseType = OpenIdConnectResponseType.Code;
