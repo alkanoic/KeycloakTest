@@ -36,8 +36,10 @@ services:
       # KC_HOSTNAME: localhost:8080
       # KC_HTTPS_KEY_STORE_FILE:
       # KC_HTTPS_KEY_STORE_PASSWORD:
+    volumes:
+      - ./docker/keycloak/data/import:/opt/keycloak/data/import
     command:
-      - start-dev # 開発モードで起動
+      - start-dev --import-realm # 開発モードで起動
       # - start --optimized
     depends_on:
       - mysql

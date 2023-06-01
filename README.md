@@ -25,3 +25,6 @@ Passwordをtestとして設定。
 - Client type：OpenID Connect
 - Client ID test-client
 
+## docker volume作成
+
+mkdir -p ./docker/keycloak/data/import
