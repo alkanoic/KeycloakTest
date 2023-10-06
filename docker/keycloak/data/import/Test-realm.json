@@ -351,7 +351,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppGoogleName", "totpAppFreeOTPName", "totpAppMicrosoftAuthenticatorName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName", "totpAppGoogleName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
@@ -378,12 +378,12 @@
     "username" : "test",
     "enabled" : true,
     "totp" : false,
-    "emailVerified" : true,
+    "emailVerified" : false,
     "firstName" : "first",
     "lastName" : "last",
     "email" : "test@alkanoic.com",
     "attributes" : {
-      "locale" : [ "en" ]
+      "locale" : [ "ja" ]
     },
     "credentials" : [ {
       "id" : "00afed4d-fb82-4956-953b-8ea6c747c6c5",
@@ -394,7 +394,7 @@
       "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
     } ],
     "disableableCredentialTypes" : [ ],
-    "requiredActions" : [ ],
+    "requiredActions" : [ "VERIFY_EMAIL" ],
     "realmRoles" : [ "default-roles-test" ],
     "notBefore" : 0,
     "groups" : [ ]
@@ -1141,6 +1141,10 @@
     "envelopeFrom" : "",
     "ssl" : "false"
   },
+  "loginTheme" : "",
+  "accountTheme" : "",
+  "adminTheme" : "",
+  "emailTheme" : "base",
   "eventsEnabled" : false,
   "eventsListeners" : [ "jboss-logging" ],
   "enabledEventTypes" : [ ],
@@ -1265,8 +1269,9 @@
       }
     } ]
   },
-  "internationalizationEnabled" : false,
-  "supportedLocales" : [ ],
+  "internationalizationEnabled" : true,
+  "supportedLocales" : [ "ja", "en" ],
+  "defaultLocale" : "ja",
   "authenticationFlows" : [ {
     "id" : "5e67323a-dd6a-4ab6-856d-15e09abbbc36",
     "alias" : "Account verification options",
