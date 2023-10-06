@@ -43,6 +43,17 @@ services:
       # - start --optimized
     depends_on:
       - mysql
+      - mailpit
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mailpit
+    hostname: mailpit
+    ports:
+      - 8025:8025
+    expose:
+      - 1025
+    environment:
+      - TZ=Asia/Tokyo
 
 volumes:
   mysql_data:
